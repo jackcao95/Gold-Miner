@@ -1,0 +1,25 @@
+ <!DOCTYPE HTML>
+  <html>
+     <head>
+         <meta charset="utf-8" />
+          <title>canvas上画动态图，视频也可以画</title>
+          
+          <script type="text/javascript">
+              window.onload = function() {
+                  var img = document.getElementById('img1');
+                 var can = document.getElementById('can');
+                 var cxt = can.getContext('2d');
+                 
+                 
+                 setInterval(function (){cxt.drawImage(img, 0, 0);}, 20);
+             }
+         </script>
+     </head>
+     
+    <body>
+        <p>准备绘制的动态图片:</p>
+         <img id="img1" src="s9.gif" alt="你的浏览器不支持img标签"></img>
+         <p>canvas画布上绘制的动态图片:</p>
+        <canvas id="can" width="800px" height="600px" style="background-color: #CCCCCC">你的浏览器不支持canvas标签</canvas>
+     </body>
+ </html>
